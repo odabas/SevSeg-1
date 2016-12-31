@@ -533,11 +533,12 @@ void SevSeg::setDigitCodes(byte digits[], char decPlaces) {
       }
     }
   }
-}
+
 void SevSeg::beep(int delayms){
   tone(A0, 1000);      // turn it on, pin and value
   delay(delayms);          // wait for a delayms ms
   noTone(A0);       // off
   delay(delayms);          // wait for a delayms ms
 }  
+  }
 /// END ///
