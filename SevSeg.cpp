@@ -529,9 +529,16 @@ void SevSeg::setDigitCodes(byte digits[], char decPlaces) {
     if (decPlaces >= 0) {
       if (digitNum == numDigits - 1 - decPlaces) {
         digitCodes[digitNum] |= B10000000;
+        beep(50);
       }
     }
   }
-}
 
+void SevSeg::beep(int delayms){
+  tone(A0, 1000);      // turn it on, pin and value
+  delay(delayms);          // wait for a delayms ms
+  noTone(A0);       // off
+  delay(delayms);          // wait for a delayms ms
+}  
+  }
 /// END ///
